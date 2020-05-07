@@ -1,11 +1,12 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "src/server.js",
   "author": "Gabriel Pereira Bastos <gabrielpb88@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/server",
+    "start": "node src/server",
+    "dev": "nodemon src/server",
     "test": "jest --coverage --runInBand --detectOpenHandles"
   },
   "dependencies": {

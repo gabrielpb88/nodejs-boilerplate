@@ -7,13 +7,11 @@ class AuthController {
     const { email, password } = req.body
     const user = await User.findOne({ where: { email } })
     if (!user) {
-      res.status(401)
-      res.body = { error: 'User not found' }
+      res.status(401).body({ error: 'User not found' })
       return
     }
     if (!(await user.checkPassword(password))) {
-      res.status(401)
-      res.body = { error: 'Password does not match' }
+      res.status(401).body = { error: 'Password does not match' }
       return
     }
 
